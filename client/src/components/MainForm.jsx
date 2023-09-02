@@ -43,7 +43,7 @@ const MainForm = () => {
     if(userRegistrationData){
       setLoading(true);
       try{
-        const response = await fetch("http://localhost:8080/api/userData", {
+        const response = await fetch("https://effizient-backend-f6zu.onrender.com/api/userData", {
           method: "POST",
           headers:{
             'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ const MainForm = () => {
         })
         await response.json();
 
-        const response1 = await fetch("http://localhost:8080/api/mailUser", {
+        const response1 = await fetch("https://effizient-backend-f6zu.onrender.com/api/mailUser", {
           method: "POST",
           headers:{
             'Content-Type': 'application/json'
